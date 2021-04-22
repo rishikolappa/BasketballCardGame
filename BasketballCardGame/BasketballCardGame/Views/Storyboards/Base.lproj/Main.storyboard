@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zW4-JE-TpI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Player Collection View Controller-->
+        <scene sceneID="Ru5-d3-wkk">
+            <objects>
+                <collectionViewController id="lBP-gs-NwT" customClass="PlayerCollectionViewController" customModule="BasketballCardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="onr-fY-Lls">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1Pn-xR-4WD">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="playerCell" id="sXF-rt-VxA" customClass="PlayerCollectionViewCell" customModule="BasketballCardGame" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="s52-Jv-OrG">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="riJ-Yk-Q5x">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="riJ-Yk-Q5x" secondAttribute="height" multiplier="1:1" id="9vH-9e-BLw"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="riJ-Yk-Q5x" secondAttribute="trailing" id="YiI-rV-joS"/>
+                                        <constraint firstAttribute="bottom" secondItem="riJ-Yk-Q5x" secondAttribute="bottom" id="hgO-27-YcX"/>
+                                        <constraint firstItem="riJ-Yk-Q5x" firstAttribute="top" secondItem="s52-Jv-OrG" secondAttribute="top" id="k1K-zA-baj"/>
+                                        <constraint firstItem="riJ-Yk-Q5x" firstAttribute="leading" secondItem="s52-Jv-OrG" secondAttribute="leading" id="lIh-uS-2VG"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="playerImageView" destination="riJ-Yk-Q5x" id="X47-VM-dRJ"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="lBP-gs-NwT" id="xz6-q7-0JK"/>
+                            <outlet property="delegate" destination="lBP-gs-NwT" id="SmI-Wl-IzN"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="E1B-kr-xz5">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="capslock.fill" catalog="system" id="KBX-nV-GPk">
+                            <connections>
+                                <segue destination="Tnk-Gq-wje" kind="presentation" id="RqF-9x-qmq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sA6-4I-lA2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934.78260869565224" y="-51.5625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cQw-Qf-OUb">
+            <objects>
+                <viewController id="Tnk-Gq-wje" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nml-Ts-TtO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Jph-k0-Obv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cGz-Tx-9ZB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="-52"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lhr-IZ-fhR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zW4-JE-TpI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HAy-Mj-Y0z">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lBP-gs-NwT" kind="relationship" relationship="rootViewController" id="LQe-IY-7if"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1R-f9-naq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.637681159420293" y="-51.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="capslock.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
