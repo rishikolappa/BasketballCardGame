@@ -66,6 +66,10 @@
 				49005BF626320C8900EE214E /* Views */,
 				49005BF326320C5F00EE214E /* Controllers */,
 				49005BEE26320BDC00EE214E /* Resources */,
+				49005BDB2632094C00EE214E /* SceneDelegate.swift */,
+				49005BD92632094C00EE214E /* AppDelegate.swift */,
+				49005BE22632095000EE214E /* Assets.xcassets */,
+				49005BE72632095000EE214E /* Info.plist */,
 			);
 			path = BasketballCardGame;
 			sourceTree = "<group>";
@@ -73,10 +77,6 @@
 		49005BEE26320BDC00EE214E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				49005BDB2632094C00EE214E /* SceneDelegate.swift */,
-				49005BD92632094C00EE214E /* AppDelegate.swift */,
-				49005BE22632095000EE214E /* Assets.xcassets */,
-				49005BE72632095000EE214E /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
